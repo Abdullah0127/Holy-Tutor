@@ -1,0 +1,1167 @@
+body h1 {
+  font-family: satoshi;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+body p {
+  font-family: satoshi;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0px;
+}
+
+body h5 {
+  font-family: satoshi;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+body h4 {
+  font-family: satoshi;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+body h3 {
+  font-family: satoshi;
+  font-size: 36px;
+  font-weight: 700;
+  font-style: bold;
+  color: #333333;
+}
+
+body h6 {
+  font-family: satoshi;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.btn button {
+  background-color: rgb(28, 27, 75);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+}
+
+
+/* Navbar CSS  */
+
+.navbar {
+  border-radius: 120px;
+  background-color: #1A2E55;
+  position: relative;
+  z-index: 2;
+
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar a:active {
+  color: white;
+}
+
+.navbar a:focus {
+  color: white;
+}
+
+.navbar-collapse {
+  max-width: fit-content;
+}
+
+.Navbar {
+  margin-top: 28px;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.navbar {
+  padding: 16px;
+}
+
+/* Home Page  */
+/* Hero Section  */
+.body .tutor-btns {
+  display: none !important;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assests/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  /* 🔥 KEY FIX */
+}
+
+.course-study,
+.course-language,
+.course-location {
+
+  padding: 10px;
+  width: 227px;
+  height: 63px;
+  background-color: hwb(210 87% 10% / 0.482);
+}
+
+.filter-div {
+  padding: 10px;
+  border-radius: 20px;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.filter-div .dropdown-toggle,
+.filter-div .dropdown-item {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.filter-div .dropdown-toggle {
+  margin-top: -14px;
+  margin-left: -26px;
+
+}
+
+.filter-div .dropdown-toggle:focus,
+.filter-div .dropdown-toggle:focus-visible,
+.filter-div .dropdown-toggle.show,
+.filter-div .dropdown-toggle.show:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.example button {
+  height: 63px;
+  width: 63px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #1A2E55;
+}
+
+.example .fa-search {
+  color: white;
+}
+
+
+/* Courses Component */
+.explore-courses {
+  background-color: #F5F5F5;
+  align-items: center;
+  text-align: center;
+  padding: 60px 80px;
+  justify-content: center;
+
+
+}
+
+.explore-courses .course-component {
+
+  text-align: start;
+
+
+
+}
+
+/* Institutions Componenet  */
+.Institutioins {
+
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+
+}
+
+.inst-image {
+  margin-top: -55px;
+}
+
+.insti-location {
+  margin: 5px 0px;
+}
+
+.institution-component {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.componenet {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+/* Tutor Components  */
+.Tutor {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.explore-tutor {
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+
+.tutor-component {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tutor-btn {
+  text-align: center;
+}
+
+.tutor-filter {
+  padding-bottom: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.tutor-filter .dropdown-toggle {
+  background-color: white;
+}
+
+/* Work Componenets  */
+.Works {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  background: linear-gradient(to right, #1A2E55 50%, transparent 50%), url("./assests//image\ 48.png");
+  background-repeat: no-repeat;
+  background-position: left center, right center;
+  background-size: 80% 100%, 61% 100%;
+}
+
+
+.number {
+  width: 47px;
+  height: 47px;
+  background-color: #D6D6D6;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+
+}
+
+.number h5 {
+  align-self: center;
+}
+
+.work-title h4,
+.work-title p {
+  color: white;
+  text-align: center;
+}
+
+.create {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.Account {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  height: 184px;
+
+}
+
+.Account .divider {
+  background-color: #c8c0c08b;
+  width: 1200px;
+  height: 1px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 22px;
+  margin-left: -40px;
+}
+
+.arrow {
+  position: absolute;
+  color: #c8c0c08b;
+
+  margin-left: 1198.5px;
+  margin-top: -13.05px;
+}
+
+/* Feedback Componenets  */
+
+.feedback {
+  background-color: #F5F5F5;
+  padding: 60px 80px;
+}
+
+.testimonial {
+  display: flex;
+  overflow: hidden;
+  /* hide scroll */
+  position: relative;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  animation: slide 12s linear infinite;
+  /* auto-slide */
+}
+
+.testi {
+  padding: 48px 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  background-color: #E9ECEF;
+  border-radius: 10px;
+}
+
+.testi img {
+  width: 100px;
+  height: 100px;
+  align-self: center;
+}
+
+/* Certified component  */
+.certified {
+  padding: 60px 0px 60px 80px;
+
+}
+
+.vedio-container {
+  width: 587px;
+  height: 539px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #31376B4D;
+}
+
+.title-container {
+  display: flex;
+  width: 582px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  align-items: start;
+}
+
+/* Scholorship Componenet  */
+.scholarship {
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+
+.scholor-cards {
+  width: 413.33px;
+  height: 506px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.singleCard {
+  padding: 16px 16px 0px 16px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.scholor-container {
+  gap: 20px;
+}
+
+.singleCard h6 {
+  margin-top: 13px;
+}
+
+.singleCard a {
+  margin: 20px 0px 0px 0px;
+}
+
+.singleCard img {
+  width: 80px;
+  height: 80px;
+}
+
+.banner {
+  padding: 60px 80px;
+  text-align: center;
+
+  background-color: #1A2E55;
+}
+
+.banner h3,
+.banner p {
+  color: white;
+}
+
+/* Accordian */
+.FAQ-main {
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.faq-title {
+  text-align: center;
+
+}
+
+.accordion {
+  width: 100%;
+  padding: 15px;
+  background: #E9ECEF;
+  color: #333333;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion i {
+  transition: transform 0.3s ease;
+  font-size: small;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.panel {
+  padding: 15px;
+  background: #E9ECEF;
+  border-radius: 0px 0px 5px 5px;
+  margin-top: 0px;
+
+}
+
+.faq-item {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Footer components  */
+.footer {
+  padding: 60px 80px 0px 80px;
+  background-color: #1A2E55;
+}
+
+.container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.social-icons .icon {
+  height: 50px;
+  width: 50px;
+  background-color: #d6d6d623;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons .icon i {
+  font-size: 23px;
+  color: white;
+}
+
+.socialImg {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.footer .links a,
+.footer .links p {
+  color: rgba(255, 255, 255, 0.608);
+  text-decoration: none;
+}
+
+.footer .container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.last {
+  border-top: 1px solid #343A40;
+  height: 41px;
+  background-color: #1A2E55;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+.last p {
+  color: rgba(255, 255, 255, 0.608);
+  margin: 0px;
+}
+
+/* Courses Archive page  */
+.Course-Archive .courses .card {
+  background-color: #F5F5F5;
+}
+
+.Course-Archive .explore-courses {
+  background-color: white;
+}
+
+.Course-Archive .tutor-filter .dropdown-toggle {
+  background-color: #F5F5F5;
+}
+
+.support {
+  padding: 60px 80px;
+  background-color: #1A2E55;
+}
+
+.support h3,
+.support p,
+.support a {
+  color: white;
+}
+
+.support a {
+  text-decoration: none;
+}
+
+.support button {
+  background-color: white;
+  color: #666666;
+}
+
+.support .btn {
+  padding: 0px;
+  display: flex;
+  gap: 10px;
+}
+
+.teaching {
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+
+}
+
+.teaching .title {
+  text-align: center;
+}
+
+.teaching-class {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.teaching-class .card {
+  background-color: #E9ECEF;
+}
+
+.teaching-class .card:first-child {
+  width: 600px !important;
+}
+
+.teaching-class .card:nth-child(2) {
+  width: 600px !important;
+}
+
+.Course-Archive .feedback {
+  background-color: white;
+}
+
+.Course-Archive .certified {
+  background-color: #F5F5F5;
+}
+
+.Course-Archive .scholarship {
+  background-color: white;
+}
+
+.courses .card-title:hover {
+  cursor: pointer;
+}
+
+/* Single Course page  */
+.singleCoursePage {
+  background-color: #F5F5F5;
+}
+
+.field-data {
+  padding: 60px 80px;
+}
+
+.field-data .row {
+  margin-top: 20px;
+}
+
+.Tutor .card-body {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.tutor-btns .btn {
+  background-color: #1A2E55;
+  color: black;
+  padding: 8px 30px;
+}
+
+.tutor-btns .btn a {
+  text-decoration: none;
+  color: black;
+}
+
+.tutorsection .explore-tutor {
+  background-color: white;
+}
+
+.tutorsection .tutor-filter .dropdown-toggle {
+  background-color: #E9ECEF;
+}
+
+.tutorsection .main-tutor {
+  background-color: #E9ECEF !important;
+  border-radius: 0px 0px 10px 10px;
+
+}
+
+.tutor-camp .explore-tutor {
+  background-color: #F5F5F5;
+}
+
+.tutor-camp .tutor-filter .dropdown-toggle {
+  background-color: white;
+}
+
+.tutor-camp .main-tutor {
+  background-color: white !important;
+  border-radius: none;
+
+}
+
+.singleCoursePage .feedback {
+  background-color: white;
+}
+
+.singleCoursePage .scholarship {
+  background-color: white;
+}
+
+.courseSection .course-component {
+  justify-content: start !important;
+  gap: 17px;
+}
+
+.courseSection .course-btn {
+  display: none !important;
+}
+
+.singleTutor .container img {
+  height: 136px;
+  width: 136px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.tutor-cont {
+  display: flex;
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.singleTutor .feedback {
+  background-color: white;
+}
+
+.singleTutor .feedback .testi {
+  background-color: #F5F5F5;
+}
+
+.singleTutor .Works {
+  background-image: none !important;
+  background-color: #F5F5F5;
+}
+
+.singleTutor .Works h4,
+.singleTutor .Works h5,
+.singleTutor .Works p,
+.singleTutor .Works a {
+  color: #333333 !important;
+}
+
+.singleTutor .create .blue-number {
+  background-color: #1A2E55 !important;
+}
+
+.singleTutor .create .blue-number h5 {
+  color: white !important;
+}
+.tutor-cont .row ul{
+  list-style: none;
+  padding: 0px;
+}
+.signup-form{
+  padding: 60px 80px;
+}
+
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 850px) {
+  .filter-div {
+    width: 700px;
+    height: 85px;
+    margin-top: 40px;
+  }
+
+  .hero-section {
+    padding: 0px 50px;
+  }
+
+  .number-projects {
+    padding: 40px 50px;
+
+  }
+
+  .arrow {
+    margin-left: 550px;
+  }
+
+  .Account .divider {
+    width: 550px;
+
+  }
+
+  .number {
+    height: 43px;
+  }
+
+  .Account {
+    height: auto;
+  }
+
+  .create {
+    gap: 10px;
+  }
+
+  .title-container {
+    padding-right: 20px;
+  }
+
+  .scholor-img img {
+    width: 300px;
+  }
+
+  .scholor-cards {
+    width: 300px;
+  }
+
+  .footer .containers {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .courses .card {
+    width: 320px !important;
+    height: 295px !important;
+
+  }
+
+  .tutor-component {
+    justify-content: center !important;
+  }
+
+  .teaching-class .card:nth-child(3) {
+    width: 600px !important;
+  }
+
+  .teaching-class .card:nth-child(4) {
+    width: 600px !important;
+  }
+
+  .teaching-class .card:nth-child(5) {
+    width: 600px !important;
+  }
+
+  .support .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+  }
+
+  .btns-con {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .options {
+    width: 250px;
+  }
+
+
+
+}
+
+@media (max-width: 767px) {
+
+  .body h1 {
+    font-size: 30px;
+  }
+
+  .body h4 {
+    font-size: 25px;
+  }
+
+  .body h3 {
+    font-size: 25px;
+  }
+
+  .hero-section {
+    height: 60vh;
+    padding: 50px 50px !important;
+    margin: 0px;
+  }
+
+  .Navbar {
+    margin: 0px;
+  }
+  .Navbar .logo{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding: 10px 0px;
+    border-radius: 0px;
+
+  }
+
+ 
+
+  .filter-div {
+    width: auto !important;
+    height: auto !important;
+    margin-top: 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .example {
+    display: none !important;
+  }
+
+  .number-projects {
+    padding: 50px 50px !important;
+  }
+
+  .visitors {
+    width: auto !important;
+    height: auto !important;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around !important;
+  }
+
+  .explore-courses {
+    padding: 50px 50px !important;
+  }
+
+  .courses .card {
+    width: auto !important;
+    height: auto !important;
+    padding: 10px !important;
+
+  }
+
+  .componenet {
+    padding: 50px !important;
+  }
+
+  .explore-tutor {
+    padding: 50px !important;
+  }
+
+  .tutor-filter {
+    padding-bottom: 10px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 9px !important;
+    width: 300px;
+  }
+
+  .Tutor .card {
+    width: auto !important;
+  }
+
+  .Tutor .features-img img {
+    width: -webkit-fill-available !important;
+
+  }
+
+  .Works {
+    padding: 50px !important;
+    background-color: #1A2E55 !important;
+    background-image: none !important;
+
+  }
+
+  .divider {
+    display: none !important;
+  }
+
+  .Account {
+    flex-wrap: wrap !important;
+    height: auto !important;
+    gap: 25px !important;
+
+  }
+
+  .create {
+    gap: 10px;
+  }
+
+  .feedback {
+    padding: 50px !important;
+  }
+
+  .testimonial-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    overflow-y: visible !important;
+    gap: 42px !important;
+
+    scroll-snap-type: x mandatory !important;
+  }
+
+  .testimonial-track::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .testi {
+    min-width: 90% !important;
+    max-width: 90% !important;
+    flex-shrink: 0 !important;
+    scroll-snap-align: center !important;
+
+    overflow: visible !important;
+    /* 🔴 IMPORTANT */
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    /* 🔴 remove negative margin */
+  }
+
+  .certified {
+    padding: 50px !important;
+
+  }
+
+  .certified .main-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .certified .title-container {
+    width: auto !important;
+
+  }
+
+  .vedio-container {
+    width: auto !important;
+    height: 300px !important;
+    border-radius: 10px !important;
+  }
+
+  .scholarship {
+    padding: 50px !important;
+  }
+
+  .scholor-img img {
+    width: 287px !important;
+    height: 210px !important;
+    object-fit: cover !important;
+  }
+
+  .scholor-cards {
+    width: auto !important;
+    height: auto !important;
+    gap: 20px !important;
+  }
+
+  .singleCard img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  .banner {
+    padding: 50px !important;
+  }
+
+  .FAQ-main {
+    padding: 50px !important;
+  }
+
+  .footer {
+    padding: 50px !important;
+  }
+
+  .footer .containers {
+    flex-wrap: wrap !important;
+    gap: 10px;
+    justify-content: start !important;
+
+  }
+
+  .container1 {
+    align-items: center;
+  }
+
+  .support {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .options {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btns-con {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .teaching {
+    padding: 50px;
+  }
+
+  .Course-Archive .hero-section h1 {
+    padding-top: 0px !important;
+  }
+
+  .singleCoursePage .field-data {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .field-data .row{
+    gap: 20px;
+  }
+
+  .Tutor .card-body {
+    padding: 0px !important;
+  }
+  .singleTutor .field-data{
+    padding: 50px 30px;
+  }
+  .singleTutor .field-data .container{
+    flex-direction: column;
+  }
+  .tutor-cont{
+    padding: 50px;
+  }
+   .tutor-cont .row {
+    gap: 20px;
+
+  }
+  .singleTutor .Works {
+  background-image: none !important;
+  background-color: #F5F5F5 !important;
+}
+
+.singleTutor .Works h4,
+.singleTutor .Works h5,
+.singleTutor .Works p,
+.singleTutor .Works a {
+  color: #333333 !important;
+}
+
+.singleTutor .create .blue-number {
+  background-color: #1A2E55 !important;
+}
+
+.singleTutor .create .blue-number h5 {
+  color: white !important;
+}
+.singleInstitute .field-data{
+  padding: 50px 30px;
+}
+.Menu{
+  width: 175px;
+}
+.navbar-collapse{
+  max-width: -webkit-fill-available !important;
+  background-color: white !important;
+  margin-top: 8px !important;
+}
+.navbar-collapse li a{
+  color: #1A2E55 !important;
+  padding-left: 10px !important;
+}
+.signup-form{
+  padding: 50px;
+}
+}
