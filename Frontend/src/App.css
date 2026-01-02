@@ -756,6 +756,17 @@ body h6 {
 .signup-form{
   padding: 60px 80px;
 }
+.navbtns  .btn{
+  background-color:#1A2E55 !important;
+  border-color: white;
+}
+.logout{
+  background-color:#1A2E55 !important;
+  border-color: white;
+}
+.logout:hover{
+  border-color: white;
+}
 
 
 /* Tablets */

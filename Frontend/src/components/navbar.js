@@ -59,7 +59,7 @@ function Navbar({ openLogin }) {
           </div>
 
           {!localStorage.getItem("token") ? (
-            <form className="d-flex">
+            <form className="navbtns d-flex" >
               <button
                 type="button"
                 className="btn btn-primary mx-1"
@@ -73,7 +73,7 @@ function Navbar({ openLogin }) {
               </Link>
             </form>
           ) : (
-            <button className="btn btn-primary" onClick={handlelogout}>
+            <button className="logout btn btn-primary" onClick={handlelogout}>
               Logout
             </button>
           )}
