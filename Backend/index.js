@@ -18,8 +18,12 @@ const port = process.env.PORT || 4000;
 // ✅ ADD CORS (IMPORTANT — before routes)
 app.use(
   cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
+    origin: [
+      'http://localhost:3000',
+      'https://holy-tutor.vercel.app'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
   })
 );
 
