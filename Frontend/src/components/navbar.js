@@ -49,11 +49,7 @@ function Navbar({ openLogin }) {
                     Courses
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/courses">
-                    Tutors
-                  </Link>
-                </li>
+               
               </ul>
             </div>
           </div>

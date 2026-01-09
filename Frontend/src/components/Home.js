@@ -190,8 +190,8 @@ function Home(props) {
           </div>
 
           <div className="course-search">
-            <form className="example" action="action_page.php">
-              <button type="submit">
+            <form className="example" >
+              <button >
                 <i className="fa fa-search"></i>
               </button>
             </form>

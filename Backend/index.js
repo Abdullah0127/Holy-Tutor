@@ -6,6 +6,8 @@ import cors from 'cors';
 
 import router from './Routes/auth.js';
 import connectToMongo from './Connection/db.js';
+import tutorrouter from './Routes/tutorauth.js';
+import studentrouter from './Routes/studentauth.js';
 
 dotenv.config();
 
@@ -31,6 +33,10 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', router);
+
+app.use('/api/tutorauth', tutorrouter)
+
+app.use('/api/studentauth', studentrouter)
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

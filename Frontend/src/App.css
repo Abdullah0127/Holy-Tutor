@@ -749,23 +749,262 @@ body h6 {
 .singleTutor .create .blue-number h5 {
   color: white !important;
 }
-.tutor-cont .row ul{
+
+.tutor-cont .row ul {
   list-style: none;
   padding: 0px;
 }
-.signup-form{
+
+.signup-form {
   padding: 60px 80px;
 }
-.navbtns  .btn{
-  background-color:#1A2E55 !important;
+
+.navbtns .btn {
+  background-color: #1A2E55 !important;
   border-color: white;
 }
-.logout{
-  background-color:#1A2E55 !important;
+
+.logout {
+  background-color: #1A2E55 !important;
   border-color: white;
 }
-.logout:hover{
+
+.logout:hover {
   border-color: white;
+}
+
+.tutorRegister {
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.divs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divs span {
+  background-color: #E9ECEF;
+  padding: 14px 16px;
+  border-radius: 100%;
+  width: fit-content;
+  z-index: 2;
+
+
+}
+
+.divs .divider {
+  position: absolute;
+  height: 2px;
+  width: 229px;
+  margin-top: 25px;
+  background-color: #E9ECEF;
+  margin-left: 274px;
+  z-index: 1;
+}
+.step1 span{
+  color: white;
+  background-color: #1A2E55;
+  
+}
+.step1 p{
+  color: #1A2E55;
+}
+
+.step2 .divider {
+  width: 265px;
+  margin-left: 304px;
+}
+.step5 .divider{
+  width: 200px;
+  margin-left: 150px;
+}
+ .tutor-form {
+  margin-top: 40px;
+}
+
+.tutorRegister .tutor-form  .btn{
+  display: block;
+  margin-left: auto;
+}
+.qualification{
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+
+}
+.qualification .step1 .divider{
+  
+  background-color: #1A2E55;
+}
+.qualification .step2 span{
+  background-color: #1A2E55;
+  color: white;
+}
+.qualification .step2 p{
+  color: #1A2E55;
+}
+.availibility{
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+.form-check{
+      display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.availibility .step1 span,
+.availibility .step2 span,
+.availibility .step3 span{
+  background-color: #1A2E55;
+  color: white;
+}
+.availibility .step1 p,
+.availibility .step2 p,
+.availibility .step3 p{
+color: #1A2E55;
+}
+.availibility .step1 .divider,
+.availibility .step2 .divider{
+  background-color: #1A2E55;
+}
+.specification{
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+.specification .step1 .divider,
+.specification .step2 .divider,
+.specification .step3 .divider{
+  background-color: #1A2E55;
+}
+.specification .step1 p,
+.specification .step2 p,
+.specification .step3 p,
+.specification .step4 p{
+  color: #1A2E55;
+}
+.specification .step1 span,
+.specification .step2 span,
+.specification .step3 span,
+.specification .step4 span{
+ background-color: #1A2E55;
+  color: white;
+}
+.page {
+  animation: fadeSlide 0.4s ease-in-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.specification table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.introvedio{
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+
+.introvedio .step1 span,
+.introvedio .step2 span,
+.introvedio .step3 span,
+.introvedio .step4 span,
+.introvedio .step5 span{
+   background-color: #1A2E55;
+  color: white;
+}
+.introvedio .step1 p,
+.introvedio .step2 p,
+.introvedio .step3 p,
+.introvedio .step4 p,
+.introvedio .step5 p{
+  color: #1A2E55;
+}
+.introvedio .step1 .divider,
+.introvedio .step2 .divider,
+.introvedio .step3 .divider,
+.introvedio .step4 .divider{
+   background-color: #1A2E55;
+}
+.final{
+  padding: 60px 80px;
+  background-color: #F5F5F5;
+}
+
+.final .step1 span,
+.final .step2 span,
+.final .step3 span,
+.final .step4 span,
+.final .step5 span,
+.final .step6 span{
+   background-color: #1A2E55;
+   color: white;
+}
+
+.final .step1 p,
+.final .step2 p,
+.final .step3 p,
+.final .step4 p,
+.final .step5 p,
+.final .step6 p{
+   color: #1A2E55;
+}
+
+.final .step1 .divider,
+.final .step2 .divider,
+.final .step3 .divider,
+.final .step4 .divider,
+.final .step5 .divider{
+   background-color: #1A2E55;
+}
+.final i{
+      border-radius: 100%;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: #3AB67A;
+    color: white;
+    width: 18px;
+}
+
+.completeform{
+  padding: 60px 80px;
+}
+
+/* Allow interaction inside modal */
+.modal {
+  pointer-events: auto !important;
+  z-index: 1055 !important;
+}
+
+/* Disable backdrop blocking clicks */
+.modal-backdrop {
+  pointer-events: none !important;
+  z-index: 1040 !important;
+}
+
+/* Ensure modal content is clickable */
+.modal-content {
+  pointer-events: auto !important;
+}
+
+.modal-backdrop {
+  pointer-events: none !important;
 }
 
 
@@ -863,6 +1102,30 @@ body h6 {
   .options {
     width: 250px;
   }
+    .steps {
+    display: none;
+  }
+  .page{
+    padding: 50px px;
+  }
+  .tutor-form .container{
+    width: 100% !important;
+  }
+ 
+  .input-1{
+    width: 60% !important;
+  }
+  .input-2{
+    width: 37% !important;
+  }
+
+  
+  .completeform{
+    padding: 50px  ;
+  }
+  .completeform .container{
+    width: auto !important;
+  }
 
 
 
@@ -891,7 +1154,8 @@ body h6 {
   .Navbar {
     margin: 0px;
   }
-  .Navbar .logo{
+
+  .Navbar .logo {
     width: 100%;
     justify-content: center;
   }
@@ -902,7 +1166,7 @@ body h6 {
 
   }
 
- 
+
 
   .filter-div {
     width: auto !important;
@@ -1118,61 +1382,105 @@ body h6 {
     flex-direction: column;
     gap: 20px;
   }
-  .field-data .row{
+
+  .field-data .row {
     gap: 20px;
   }
 
   .Tutor .card-body {
     padding: 0px !important;
   }
-  .singleTutor .field-data{
+
+  .singleTutor .field-data {
     padding: 50px 30px;
   }
-  .singleTutor .field-data .container{
+
+  .singleTutor .field-data .container {
     flex-direction: column;
   }
-  .tutor-cont{
+
+  .tutor-cont {
     padding: 50px;
   }
-   .tutor-cont .row {
+
+  .tutor-cont .row {
     gap: 20px;
 
   }
+
   .singleTutor .Works {
-  background-image: none !important;
-  background-color: #F5F5F5 !important;
-}
+    background-image: none !important;
+    background-color: #F5F5F5 !important;
+  }
 
-.singleTutor .Works h4,
-.singleTutor .Works h5,
-.singleTutor .Works p,
-.singleTutor .Works a {
-  color: #333333 !important;
-}
+  .singleTutor .Works h4,
+  .singleTutor .Works h5,
+  .singleTutor .Works p,
+  .singleTutor .Works a {
+    color: #333333 !important;
+  }
 
-.singleTutor .create .blue-number {
-  background-color: #1A2E55 !important;
-}
+  .singleTutor .create .blue-number {
+    background-color: #1A2E55 !important;
+  }
 
-.singleTutor .create .blue-number h5 {
-  color: white !important;
-}
-.singleInstitute .field-data{
-  padding: 50px 30px;
-}
-.Menu{
-  width: 175px;
-}
-.navbar-collapse{
-  max-width: -webkit-fill-available !important;
-  background-color: white !important;
-  margin-top: 8px !important;
-}
-.navbar-collapse li a{
-  color: #1A2E55 !important;
-  padding-left: 10px !important;
-}
-.signup-form{
-  padding: 50px;
-}
+  .singleTutor .create .blue-number h5 {
+    color: white !important;
+  }
+
+  .singleInstitute .field-data {
+    padding: 50px 30px;
+  }
+
+  .Menu {
+    width: 175px;
+  }
+
+  .navbar-collapse {
+    max-width: -webkit-fill-available !important;
+    background-color: white !important;
+    margin-top: 8px !important;
+  }
+
+  .navbar-collapse li a {
+    color: #1A2E55 !important;
+    padding-left: 10px !important;
+  }
+
+  .signup-form {
+    padding: 50px;
+  }
+  .steps {
+    display: none;
+  }
+  .page{
+    padding: 50px 20px;
+  }
+  .tutor-form .container{
+    width: 100% !important;
+  }
+  .tutor-form .mb-3{
+    width: 100% !important; 
+  }
+  .input-1{
+    width: 60% !important;
+  }
+  .input-2{
+    width: 37% !important;
+  }
+  .week{
+    justify-content: space-between !important;
+  }
+  .specification .table{
+    margin-left: -15px !important;
+  }
+  .specification .table td{
+    padding: 5px 4px !important;
+  }
+  .completeform{
+    padding: 50px 20px ;
+  }
+  .completeform .container{
+    width: auto !important;
+  }
 }
