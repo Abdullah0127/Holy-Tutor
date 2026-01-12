@@ -24,7 +24,7 @@ function StudentRegister({ closePopup }) {
     }
 
     const response = await fetch(
-      "https://holy-tutor-tumx.vercel.app/api/studentauth/register",
+      "http://localhost:4000/api/studentauth/register",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
