@@ -15,9 +15,9 @@ function Login({ onLoginSuccess }) {
     // Decide endpoint based on user type
     let endpoint = "";
     if (credentials.userType === "tutor") {
-      endpoint = "http://localhost:4000/api/tutorauth/login";
+      endpoint = "https://holy-tutor.vercel.app/api/tutorauth/login";
     } else if (credentials.userType === "student") {
-      endpoint = "http://localhost:4000/api/studentauth/login";
+      endpoint = "https://holy-tutor.vercel.app/api/studentauth/login";
     } else if (credentials.userType === "admin") {
       endpoint = "https://holy-tutor-tumx.vercel.app/api/auth/login";
     }
