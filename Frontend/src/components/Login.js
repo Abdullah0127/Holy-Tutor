@@ -13,14 +13,14 @@ function Login({ onLoginSuccess }) {
     e.preventDefault();
 
     // Decide endpoint based on user type
-    let endpoint = "https://holy-tutor-tumx.vercel.app/api/auth/login";
-    // if (credentials.userType === "tutor") {
-    //   endpoint = "https://holy-tutor-tumx.vercel.app/api/tutorauth/login";
-    // } else if (credentials.userType === "student") {
-    //   endpoint = "https://holy-tutor-tumx.vercel.app/api/studentauth/login";
-    // } else if (credentials.userType === "admin") {
-    //   endpoint = "https://holy-tutor-tumx.vercel.app/api/auth/login";
-    // }
+    let endpoint = "";
+    if (credentials.userType === "tutor") {
+      endpoint = "https://holy-tutor-tumx.vercel.app/api/tutorauth/login";
+    } else if (credentials.userType === "student") {
+      endpoint = "https://holy-tutor-tumx.vercel.app/api/studentauth/login";
+    } else if (credentials.userType === "admin") {
+      endpoint = "https://holy-tutor-tumx.vercel.app/api/auth/login";
+    }
 
     try {
       const response = await fetch(endpoint, {
