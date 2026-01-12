@@ -43,6 +43,7 @@ const tutorProfileSchema = new mongoose.Schema({
   email: { type: String, unique: true },
   number: String,
   languages: [languageSchema],
+   password: { type: String, required: true },
 
   /* Form 2 - Qualification */
   hafiz: String,
@@ -60,6 +61,7 @@ const tutorProfileSchema = new mongoose.Schema({
 
   /* Form 5 - Intro Video */
   introVideo: String,
+ 
 
   /* Meta */
   createdAt: {

@@ -5,6 +5,7 @@ const aboutSchema = new mongoose.Schema({
     type: String,
     
   },
+  
   gender: String,
   nationality: String,
   residence: String,   // Country of Residence

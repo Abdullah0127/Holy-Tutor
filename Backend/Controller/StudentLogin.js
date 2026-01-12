@@ -50,3 +50,51 @@ export async function Register(req, res) {
   }
 }
 
+export async function Login(req, res) {
+  try {
+    const { email, password } = req.body;
+
+    // Use correct schema
+    const existingUser = await StudentUser.findOne({ email });
+    if (!existingUser) {
+      return res.status(400).json({
+        status: "failed",
+        data: [],
+        message: "No account found with this email. Please register first."
+      });
+    }
+
+    const isMatch = await bcrypt.compare(password, existingUser.password);
+    if (!isMatch) {
+      return res.status(400).json({
+        status: "failed",
+        data: [],
+        message: "Invalid password. Please try again."
+      });
+    }
+
+    const token = jwt.sign(
+      { id: existingUser._id, email: existingUser.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    const { password: pwd, ...user_data } = existingUser._doc;
+
+    res.status(200).json({
+      status: "success",
+      data: { user: user_data, token },
+      message: "Login successful.",
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      status: "error",
+      code: 500,
+      data: [],
+      message: "Internal Server Error",
+    });
+  }
+}
+

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Availibility from "./Availibility";
-import { registerTutor } from "../services/api";
 import Final from "./Final";
 import Introvedio from "./Introvedio";
 import Tutorregister from "./Tutorregister";
@@ -11,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 function MultiStemform() {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -34,23 +34,21 @@ function MultiStemform() {
   const nextStep = () => setStep(step + 1);
   const prevStep = () => setStep(step - 1);
 
-  const submitTutor = async () => {
-    try {
-      const response = await registerTutor(formData);
-      if (response.status === "success") {
-        alert("Tutor registered successfully!");
-        navigate('/completetutor')
-      } else {
-        alert("Something went wrong!");
-      }
-    } catch (error) {
-      alert("Server error! Check backend connection.");
-    }
+  // Instead of submitting to backend, just show a "Data saved" message
+  const saveProfileData = () => {
+    alert("Your profile data has been saved successfully!");
+    nextStep(); // Move to final step
   };
 
   switch (step) {
     case 1:
-      return <Tutorregister formData={formData} setFormData={setFormData} nextStep={nextStep} />;
+      return (
+        <Tutorregister
+          formData={formData}
+          setFormData={setFormData}
+          nextStep={nextStep}
+        />
+      );
     case 2:
       return (
         <Qualification
@@ -83,18 +81,18 @@ function MultiStemform() {
         <Introvedio
           formData={formData}
           setFormData={setFormData}
-          nextStep={submitTutor}
+          nextStep={saveProfileData} // Save data AND go to final step
           prevStep={prevStep}
         />
       );
     default:
-    return (
-    <Final
-      formData={formData}
-      prevStep={prevStep}
-      nextStep={submitTutor} // submit here
-    />
-  );
+      return (
+        <Final
+          formData={formData}
+          prevStep={prevStep}
+          nextStep={() => navigate("/completetutor")} // navigate to complete page
+        />
+      );
   }
 }
 

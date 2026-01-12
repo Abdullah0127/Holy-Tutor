@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -13,17 +13,15 @@ import Signup from "./components/Signup";
 import Navbar from "./components/navbar";
 import Footer from "./components/Footer";
 
-
-
-
-
 import Completetutor from "./tutorRegistration/Completetutor";
 import StudentRegister from "./studentRegistration/StudentRegister";
 import MultiStemform from "./tutorRegistration/MultiStemform";
+import Tutorregistration from "./tutorRegistration/Tutorregistration";
+import Tutorregister from "./tutorRegistration/Tutorregister";
 
 
 function App() {
-  const [modal, setModal] = useState(null); // "login" | "student" | null
+  const [modal, setModal] = useState(null); // "login" | "student" | "tutor" | null
 
   const closeModal = () => setModal(null);
 
@@ -50,6 +48,9 @@ function App() {
         <Route path="/introvedio" element={<MultiStemform />} />
         <Route path="/final" element={<MultiStemform />} />
         <Route path="/completetutor" element={<Completetutor />} />
+        <Route path="/tutorregistration" element={<Tutorregistration />} />
+        <Route path="/tutorregister" element={<Tutorregister />} />
+       
       </Routes>
 
       {/* MODALS */}
@@ -87,12 +88,12 @@ function App() {
                           Student
                         </span>
                         ,{" "}
-                        <Link
-                          to="/tutor-register"
-                          onClick={closeModal}
+                        <span
+                          style={{ color: "#0d6efd", cursor: "pointer" }}
+                          onClick={() => setModal("tutor")}
                         >
                           Tutor
-                        </Link>
+                        </span>
                       </p>
                     </div>
                     <button
@@ -137,6 +138,40 @@ function App() {
                   </div>
                   <div className="modal-body">
                     <StudentRegister closePopup={closeModal} />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+
+        {modal === "tutor" && (
+          <>
+            {/* BACKDROP */}
+            <motion.div
+              className="modal-backdrop fade show"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={closeModal}
+            />
+
+            {/* TUTOR REGISTER MODAL */}
+            <motion.div
+              className="modal fade show d-block"
+              initial={{ opacity: 0, y: -40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -40, scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+            >
+               <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title">Tutor Sign Up</h5>
+                    <button className="btn-close" onClick={closeModal} />
+                  </div>
+                  <div className="modal-body">
+                    <Tutorregistration closePopup={closeModal} />
                   </div>
                 </div>
               </div>

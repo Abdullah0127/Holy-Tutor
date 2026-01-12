@@ -1,41 +1,57 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import MultiSteps from "./MultiSteps";
+import React from "react";
 
 function Tutorregister({ formData, setFormData, nextStep }) {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Pre-fill name & email from state if available
+  const initialFormData = {
+    name: location.state?.name || "",
+    email: location.state?.email || "",
+    gender: formData?.gender || "",
+    nationality: formData?.nationality || "",
+    residence: formData?.residence || "",
+    birth: formData?.birth || "",
+    phone: formData?.phone || "",
+    languages: formData?.languages || [{ language: "", level: "" }],
+  };
+
+  const [localFormData, setLocalFormData] = React.useState(initialFormData);
 
   const handleclick = (e) => {
     e.preventDefault();
-    nextStep();
-    navigate("/qualification");
+    // Update parent formData if needed
+    if (setFormData) setFormData(localFormData);
+
+    // Move to next step and navigate
+    if (nextStep) nextStep();
+    navigate("/qualification", { state: { name: localFormData.name, email: localFormData.email } });
   };
 
   const handleLanguageChange = (index, e) => {
     const { name, value } = e.target;
-    const newLanguages = [...formData.languages];
+    const newLanguages = [...localFormData.languages];
     newLanguages[index][name] = value;
 
-    setFormData({
-      ...formData,
-      languages: newLanguages,
-    });
+    setLocalFormData({ ...localFormData, languages: newLanguages });
   };
 
   const handleAddLanguage = (e) => {
     e.preventDefault();
-    setFormData({
-      ...formData,
-      languages: [...formData.languages, { language: "", level: "" }],
+    setLocalFormData({
+      ...localFormData,
+      languages: [...localFormData.languages, { language: "", level: "" }],
     });
   };
 
   return (
     <div className="tutorRegister page">
       <MultiSteps />
-
-      <div className="tutor-form ">
+      <div className="tutor-form">
         <form
-          className="container w-50 bg-white "
+          className="container w-50 bg-white"
           style={{ borderRadius: "20px", padding: "20px" }}
         >
           <h6>Tell us about yourself</h6>
@@ -45,104 +61,101 @@ function Tutorregister({ formData, setFormData, nextStep }) {
           </p>
 
           <div className="form-inputs d-flex flex-wrap gap-2">
-
-            {/* Full Name */}
             <div className="mb-3 w-100">
               <label className="form-label">Full Name</label>
               <input
                 placeholder="Enter Full Name"
                 type="text"
                 className="form-control"
-                value={formData.name}
+                value={localFormData.name}
                 onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
+                  setLocalFormData({ ...localFormData, name: e.target.value })
                 }
               />
             </div>
 
-            {/* Gender */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Gender</label>
               <input
                 placeholder="Select Gender"
                 type="text"
                 className="form-control"
-                value={formData.gender}
+                value={localFormData.gender}
                 onChange={(e) =>
-                  setFormData({ ...formData, gender: e.target.value })
+                  setLocalFormData({ ...localFormData, gender: e.target.value })
                 }
               />
             </div>
 
-            {/* Nationality */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Nationality</label>
               <input
                 placeholder="Enter Nationality"
                 type="text"
                 className="form-control"
-                value={formData.nationality}
+                value={localFormData.nationality}
                 onChange={(e) =>
-                  setFormData({ ...formData, nationality: e.target.value })
+                  setLocalFormData({
+                    ...localFormData,
+                    nationality: e.target.value,
+                  })
                 }
               />
             </div>
 
-            {/* Residence */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Country of Residence</label>
               <input
                 placeholder="Enter Country of Residence"
                 type="text"
                 className="form-control"
-                value={formData.residence}
+                value={localFormData.residence}
                 onChange={(e) =>
-                  setFormData({ ...formData, residence: e.target.value })
+                  setLocalFormData({
+                    ...localFormData,
+                    residence: e.target.value,
+                  })
                 }
               />
             </div>
 
-            {/* Birth */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Country of Birth</label>
               <input
                 type="date"
                 className="form-control"
-                value={formData.birth}
+                value={localFormData.birth}
                 onChange={(e) =>
-                  setFormData({ ...formData, birth: e.target.value })
+                  setLocalFormData({ ...localFormData, birth: e.target.value })
                 }
               />
             </div>
 
-            {/* Email */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Email</label>
               <input
                 type="email"
                 className="form-control"
-                value={formData.email}
+                value={localFormData.email}
                 onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
+                  setLocalFormData({ ...localFormData, email: e.target.value })
                 }
               />
             </div>
 
-            {/* Phone */}
             <div className="mb-3" style={{ width: "49%" }}>
               <label className="form-label">Phone</label>
               <input
                 type="text"
                 className="form-control"
-                value={formData.phone}
+                value={localFormData.phone}
                 onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
+                  setLocalFormData({ ...localFormData, phone: e.target.value })
                 }
               />
             </div>
 
-            {/* Languages */}
-            {formData.languages.map((lang, index) => (
+            {(localFormData.languages || []).map((lang, index) => (
               <div
                 key={index}
                 className="lang-input w-100 d-flex flex-wrap gap-2 mb-3"
@@ -157,7 +170,6 @@ function Tutorregister({ formData, setFormData, nextStep }) {
                     onChange={(e) => handleLanguageChange(index, e)}
                   />
                 </div>
-
                 <div className="input-2" style={{ width: "29%" }}>
                   <label className="form-label">Level</label>
                   <input
@@ -173,17 +185,20 @@ function Tutorregister({ formData, setFormData, nextStep }) {
 
             <p style={{ marginTop: "-10px", marginBottom: "20px" }}>
               +{" "}
-              <a href="/" onClick={handleAddLanguage} style={{ color: "#1A2E55" }}>
+              <a
+                href="/"
+                onClick={handleAddLanguage}
+                style={{ color: "#1A2E55" }}
+              >
                 Add another Language
               </a>
             </p>
-
           </div>
 
           <button
             type="button"
             onClick={handleclick}
-            className="btn btn-primary "
+            className="btn btn-primary"
           >
             Continue
           </button>

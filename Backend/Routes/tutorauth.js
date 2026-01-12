@@ -1,6 +1,6 @@
 // Routes/tutorauth.js
 import express from "express";
-import { TutorRegister } from "../Controller/TutorLogin.js";
+import { Login, TutorRegister } from "../Controller/TutorLogin.js";
 import multer from "multer";
 
 const tutorrouter = express.Router();
@@ -27,5 +27,7 @@ tutorrouter.post(
   ]),
   TutorRegister
 );
+
+tutorrouter.post("/login", Login)
 
 export default tutorrouter;

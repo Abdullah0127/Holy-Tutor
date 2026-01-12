@@ -3,20 +3,20 @@ import { useState, useEffect } from "react";
 
 function Specialties({ formData, setFormData, nextStep, prevStep }) {
   // Local courses state
-  const [courses, setCourses] = useState(
-    formData.courses.length > 0
-      ? formData.courses
-      : [
-          {
-            open: false,
-            coursename: "",
-            agegroup: [],
-            oneonone: false,
-            sharedclass: false,
-            custompackage: false,
-          },
-        ]
-  );
+ const [courses, setCourses] = useState(
+  formData?.courses?.length > 0
+    ? formData.courses
+    : [
+        {
+          open: false,
+          coursename: "",
+          agegroup: [],
+          oneonone: false,
+          sharedclass: false,
+          custompackage: false,
+        },
+      ]
+);
 
   // Sync local courses with parent formData
   useEffect(() => {
